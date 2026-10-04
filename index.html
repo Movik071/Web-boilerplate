@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachinder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <div class="logo">Teachinder</div>
+                <div class="search-box">
+                    <input type="text" placeholder="Name, note or age to search">
+                    <button class="btn btn-primary">Search</button>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <nav class="main-nav">
+                    <a href="#" class="active">Teachers</a>
+                    <a href="#">Statistics</a>
+                    <a href="#">Favorites</a>
+                    <a href="#">About</a>
+                </nav>
+                <button class="btn btn-outline js-open-add-modal">Add teacher</button>
+            </div>
+        </header>
+
+        <hr class="divider">
+
+        <main>
+            <section class="top-teachers">
+                <h2 class="section-title">Top Teachers</h2>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Age</label>
+                        <select><option>18-31</option></select>
+                    </div>
+                    <div class="filter-group border-left">
+                        <label>Region</label>
+                        <select><option>Europe</option></select>
+                    </div>
+                    <div class="filter-group border-left">
+                        <label>Sex</label>
+                        <select><option>Male</option></select>
+                    </div>
+                    <div class="filter-group border-left">
+                        <label><input type="checkbox"> Only with photo</label>
+                    </div>
+                    <div class="filter-group border-left">
+                        <label><input type="checkbox"> Only favorites</label>
+                    </div>
+                </div>
+
+                <div class="teachers-grid">
+                    <div class="teacher-card js-open-info-modal">
+                        <div class="avatar-wrapper">
+                            <img src="https://via.placeholder.com/120" alt="Ihor Tkachuk">
+                        </div>
+                        <h3>Ihor Tkachuk</h3>
+                        <p class="subject">Chemistry</p>
+                        <p class="country">Ukraine</p>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="avatar-wrapper">
+                            <img src="https://via.placeholder.com/120" alt="Pragg">
+                        </div>
+                        <h3>Pragg Rameshbabu</h3>
+                        <p class="subject">Chess</p>
+                        <p class="country">India</p>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="avatar-wrapper">
+                            <img src="https://via.placeholder.com/120" alt="Floor">
+                        </div>
+                        <h3>Floor Jansen</h3>
+                        <p class="subject">Vocal</p>
+                        <p class="country">Denmark</p>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="avatar-wrapper">
+                            <img src="https://via.placeholder.com/120" alt="John">
+                        </div>
+                        <h3>John Burke</h3>
+                        <p class="subject">Computer Science</p>
+                        <p class="country">Belgium</p>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="avatar-wrapper">
+                            <img src="https://via.placeholder.com/120" alt="Ari">
+                            <span class="star-icon">★</span>
+                        </div>
+                        <h3>Ari Tang</h3>
+                        <p class="subject">Biology</p>
+                        <p class="country">China</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divider">
+
+            <section class="statistics">
+                <h2 class="section-title">Statistics</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Speciality</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Nationality</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Daisy Alexander</td>
+                                <td>Chemistry</td>
+                                <td>28</td>
+                                <td>Female</td>
+                                <td>Vietnam</td>
+                            </tr>
+                            <tr>
+                                <td>Julia Bradley</td>
+                                <td>Math</td>
+                                <td>26</td>
+                                <td>Female</td>
+                                <td>USA</td>
+                            </tr>
+                            <tr>
+                                <td>Rita Hart</td>
+                                <td>Art</td>
+                                <td>41</td>
+                                <td>Female</td>
+                                <td>Ireland</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <span>...</span>
+                    <a href="#">Last</a>
+                </div>
+            </section>
+
+            <hr class="divider">
+
+            <section class="favorites">
+                <h2 class="section-title">Favorites</h2>
+                <div class="slider">
+                    <button class="arrow">&lt;</button>
+                    <div class="slider-track">
+                        <div class="teacher-card">
+                            <div class="avatar-wrapper">
+                                <img src="https://via.placeholder.com/120" alt="Ihor">
+                            </div>
+                            <h3>Ihor Tkachuk</h3>
+                            <p class="country">Ukraine</p>
+                        </div>
+                        <div class="teacher-card">
+                            <div class="avatar-wrapper">
+                                <div class="initials">A.M</div>
+                            </div>
+                            <h3>Anna Makarevich</h3>
+                            <p class="country">Belarus</p>
+                        </div>
+                    </div>
+                    <button class="arrow">&gt;</button>
+                </div>
+            </section>
+        </main>
+
+        <hr class="divider">
+
+        <footer class="footer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque facere, hic impedit itaque molestiae sit tempore? Ea in mollitia natus rerum voluptates. Ex ex excepturi facere tempora.</p>
+            <div class="footer-bottom">
+                <nav class="main-nav">
+                    <a href="#" class="active">Teachers</a>
+                    <a href="#">Statistics</a>
+                    <a href="#">Favorites</a>
+                    <a href="#">About</a>
+                </nav>
+                <button class="btn btn-outline js-open-add-modal">Add teacher</button>
+            </div>
+        </footer>
+    </div>
+
+    <div id="add-teacher-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Teacher</h3>
+                <button class="close-btn js-close-modal">&times;</button>
+            </div>
+            <form class="add-teacher-form">
+                <label>Name</label>
+                <input type="text" placeholder="Enter name">
+                
+                <label>Speciality</label>
+                <select><option>Mathematics</option></select>
+                
+                <div class="form-row">
+                    <div class="form-col">
+                        <label>Country</label>
+                        <select><option>Ukraine</option></select>
+                    </div>
+                    <div class="form-col">
+                        <label>City</label>
+                        <input type="text">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-col">
+                        <label>Email</label>
+                        <input type="email">
+                    </div>
+                    <div class="form-col">
+                        <label>Phone</label>
+                        <input type="tel">
+                    </div>
+                </div>
+
+                <label>Date of birth</label>
+                <input type="date">
+
+                <div class="sex-radio">
+                    <label>Sex</label>
+                    <input type="radio" name="sex" checked> Male
+                    <input type="radio" name="sex"> Female
+                </div>
+
+                <button type="submit" class="btn btn-outline full-width">Add</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="info-teacher-modal" class="modal-overlay">
+        <div class="modal-content info-content">
+            <div class="modal-header">
+                <h3>Teacher Info</h3>
+                <button class="close-btn js-close-modal">&times;</button>
+            </div>
+            <div class="info-body clearfix">
+                <img src="https://via.placeholder.com/150" alt="Ihor Tkachuk" class="float-avatar">
+                
+                <div class="info-text">
+                    <h2 class="info-name">Ihor Tkachuk <span class="star-icon">★</span></h2>
+                    <p class="info-subject"><strong>Chemistry</strong></p>
+                    <p>Kyiv, Ukraine</p>
+                    <p>35, Male</p>
+                    <p><a href="mailto:ihor_tkachuk@domain.com">ihor_tkachuk@domain.com</a></p>
+                    <p>+380964993252</p>
+                </div>
+            </div>
+            <p class="info-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consectetur culpa cumque, distinctio dolor dolore dolorem doloremque ea explicabo facilis nam nesciunt nisi pariatur perspiciatis porro quis similique temporibus veniam veritatis.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
